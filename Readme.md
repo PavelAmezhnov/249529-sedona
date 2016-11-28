@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Павел Амежнов](https://up.htmlacademy.ru/adaptive/9/user/249529).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Ожерельев](https://github.com/mojereliev).
 
 ---
 
