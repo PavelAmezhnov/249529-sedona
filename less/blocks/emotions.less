@@ -1,20 +1,36 @@
 .emotions {
-  padding: 15px 20px;
+
 }
 
 .emotions__title {
-  padding: 0 0 15px 0;
-  text-align: center;
-  font-size: 18px;
+  .form-title-wrapper();
+  margin: 20px 0;
+  @media (min-width: 768px) {
+    margin: 48px 0 28px 0;
+  }
+
+  &::after {
+    .form-title-decoration();
+  }
+}
+
+.emotions__title-inner {
+  .form-title();
 }
 
 .emotions__text {
   width: 100%;
-  height: 200px;
+  height: 160px;
   box-sizing: border-box;
-  padding: 10px;
+  margin: 0 0 25px 0;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 26px;
   background-color: rgba(242, 242, 242, 1);
   resize: none;
   border: none;
   outline: none;
+  @media (min-width: 768px) {
+    margin: 29px 0 33px 0;
+  }
 }

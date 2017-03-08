@@ -1,39 +1,95 @@
 .main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-grow: 1;
+  flex-flow: row wrap;
   position: relative;
-  background-color: @sky-color;
   font-size: 0;
 }
 
-.main-menu__toggle {
+.main-menu__close,
+.main-menu__open {
   position: absolute;
   top: 0;
   right: 4px;
   width: 55px;
   height: 55px;
+  border: none;
+  padding: 0;
+  outline: none;
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
-.main-menu__cross-link {
-  display: block;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  text-align: center;
+.main-menu__close {
+   background-color: @sky-color;
 }
 
-.main-menu__cross-wrapper {
-  display: inline-block;
-  vertical-align: middle;
+.main-menu__open {
+   background-color: @white-color;
 }
 
 .main-menu__cross {
-  fill: rgba(255, 255, 255, 1);
+  fill: @white-color;
+}
+
+.main-menu__menu {
+  fill: @sky-color;
 }
 
 .main-menu__item {
-  display: block;
+  width: 100%;
   height: 55px;
-  padding: 0 20px;
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.2);
+  background-color: @sky-color;
+  position: relative;
+  @media (min-width: 768px) {
+    flex-basis: 150px;
+    box-shadow: none;
+    background-color: @white-color;
+  }
+
+  &:nth-child(2)::before,
+  &:nth-child(3)::before,
+  &:nth-child(4)::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &:nth-child(-n+3)::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    background-color: @white-color;
+    box-shadow: 0 -1px 7px 0 rgba(0, 0, 0, 0.2);
+    @media (min-width: 768px) {
+      box-shadow: none;
+    }
+  }
+
+  &:nth-child(3),
+  &:nth-child(4) {
+    @media (min-width: 768px) {
+      order: 1;
+    }
+  }
 }
 
 .main-menu__link {
@@ -42,34 +98,20 @@
   font-size: 18px;
   line-height: 55px;
   font-weight: bold;
-  color: rgba(255, 255, 255, 1);
- /* outline: 1px solid #000;*/
-}
+  color: @white-color;
+  @media (min-width: 768px) {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 1);
+  }
 
-.main-header__logo-wrapper {
-  position: relative;
-  height: 55px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 1);
-  /*outline: 1px solid #000;*/
-}
-
-.main-header__toggle {
-  position: absolute;
-  top: 0;
-  right: 5px;
-  width: 55px;
-  height: 55px;
-  border: none;
-  padding: 0;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.main-header__hamburger-wrapper {
-
-}
-
-.main-header__hamburger {
-  fill: @sky-color;
-
+  &--logo {
+    width: 102px;
+    height: 84px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url(../../img/logo-sedona-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
 }

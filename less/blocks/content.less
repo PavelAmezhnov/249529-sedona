@@ -1,32 +1,60 @@
 .content {
-  background-image: url(../../img/bg-intro-triangle-mobile.svg), url(../../img/text-sedona.svg), url(../../img/bg-back-mobile@1x.jpg);
-  background-position: center 143px, center 55px, center -220px;
-  background-repeat: no-repeat;
-  background-size: auto, 280px, auto;
-  &--index-page {
-    background-image: url(../../img/bg-intro-triangle-mobile.svg), url(../../img/text-sedona-index.svg), url(../../img/bg-back-mobile@1x.jpg);
-    background-position: center 363px, center 90px, center top;
-    background-repeat: no-repeat;
-    background-size: auto, 280px, auto;
-  };
+
 }
 
+.content__promo {
+  width: 100%;
+  height: 159px;
+  background-color: rgba(0, 0, 0, 1);
+  background-image: url(../../img/intro-triangle.svg), url(../../img/text-sedona.svg), url(../../img/bg-back-mobile@1x.jpg);
+  background-position: center bottom, center 55px, center bottom;
+  background-repeat: no-repeat;
+  background-size: auto, 280px, auto;
+  @media (min-width: 768px) {
+    height: 290px;
+    background-size: auto, 460px, 100%;
+    background-position: center bottom, center 95px, center bottom;
+  }
+  @media (min-width: 1200px) {
+    background-size: auto, 480px, cover;
+  }
+  &--index-page {
+    height: 390px;
+    background-image: url(../../img/intro-triangle.svg), url(../../img/text-sedona-index.svg), url(../../img/bg-back-mobile@1x.jpg);
+    background-position: center bottom, center 90px, center top;
+    background-size: auto, 280px, auto;
+    @media (min-width: 768px) {
+      height: 518px;
+      background-position: center bottom, center 80px, center top;
+      background-size: auto, 460px, cover;
+    }
+  }
+}
+
+
 .content__title {
-  margin: 0;
-  padding: 200px 30px 0 30px;
+  width: 87.5%;
+  margin: 30px auto 0 auto;
+//  padding: 30px 0 0 0;
   text-align: center;
   font-size: 18px;
   line-height: 26px;
-  &--index-page {
-    padding: 420px 30px 0 30px;
+  @media (min-width: 600px) {
+    width: 560px;
   }
-  /*outline: 1px solid;*/
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 .content__desc {
-  margin: 0;
-  padding: 20px 15px 20px 15px;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 0;
   text-align: center;
   font-size: 14px;
   line-height: 24px;
+  @media (min-width: 450px) {
+    width: 440px;
+  }
 }

@@ -1,0 +1,8 @@
+<svg version="1.1" width="1200" height="57" viewBox="0 0 1200 57" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#ffffff">
+  <path d="m0 0l600 57h-600z"/>
+  <path d="m1200 0l-600 57h600z"/>
+  <path d="m250 0c350 57 0 0 350 57h-350z"/>
+  <path d="m950 0c-350 57 0 0-350 57h350z"/>
+ </g>
+</svg>

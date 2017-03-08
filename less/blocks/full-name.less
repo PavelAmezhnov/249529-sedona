@@ -1,17 +1,36 @@
 .full-name {
+  @media (min-width: 768px) {
+    width: 43.75%;
+    margin: 0;
+  }
+}
 
+.full-name__inner {
+  @media (min-width: 768px) {
+    padding: 0 0 0 17%;
+  }
 }
 
 .full-name__title {
-  text-align: center;
-  font-size: 18px;
+  .form-title-wrapper();
+  margin: 20px 0 24px 0;
+  @media (min-width: 768px) {
+    text-align: left;
+    margin: 60px 0;
+  }
 }
 
 .full-name__item {
   display: table;
-  max-width: 400px;
   margin: 0 0 20px 0;
   font-size: 14px;
+  @media (min-width: 768px) {
+    margin: 0 0 22px 0;
+  }
+}
+
+.full-name__item:last-child {
+  margin: 0 0 24px 0;
 }
 
 .full-name__desc {
