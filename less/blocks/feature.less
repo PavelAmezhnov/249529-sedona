@@ -1,0 +1,93 @@
+.feature {
+  &:nth-of-type(1) {
+    padding: 50px 0 0 0;
+    background-color: @sky-color;
+    background-image: url(../../img/bg-triangle.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &:nth-of-type(1) .feature__img {
+    margin: 0 0 0 -110px;
+  }
+
+  &:nth-of-type(n+2) {
+    padding: 30px 0 0 0;
+  }
+
+  &:nth-of-type(2) {
+    background-color: @sky-color;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &:nth-of-type(2) .feature__img {
+    margin: -75px 0 0 -31px;
+  }
+
+  &:nth-of-type(n+3) {
+    background-color: rgba(238, 238, 238, 1);
+  }
+
+  &:nth-of-type(3),  &:nth-of-type(4) {
+    position: relative;
+  }
+
+  &:nth-of-type(3)::after,  &:nth-of-type(4)::after {
+    position: absolute;
+    content: "";
+    width: 87.5%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /*&:nth-of-type(1) .feature__desc {
+    padding: 0 0 275px 0;
+    background-image: url(../../img/photo-city@1x.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }*/
+
+  /*&:nth-of-type(2) .feature__desc {
+    padding: 0 0 350px 0;
+    background-image: url(../../img/photo-4-mobile@1x.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: auto 260px;
+  }*/
+}
+
+.feature__title {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.feature__number {
+  text-align: center;
+  font-size: 14px;
+}
+
+.feature__desc {
+  margin: 0;
+  padding: 0 20px 20px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.feature__img-wrap {
+  width: 100%;
+  min-width: 335px;
+  height: 260px;
+  overflow: hidden;
+}
+
+.feature__list {
+
+}
